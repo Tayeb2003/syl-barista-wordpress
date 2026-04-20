@@ -1,0 +1,11 @@
+asset_id,page,section,orientation,min_resolution,style_direction,alt_text,priority
+hero-01,Home,Hero,landscape,2400x1400,"Cinematic close-up, deep contrast, warm highlights","Barista preparing signature coffee at Syl Barista",High
+menu-01,Home,Signature Drinks,square,1600x1600,"Editorial product shot, dark background","Signature saffron latte with microfoam art",High
+menu-02,Home,Signature Drinks,square,1600x1600,"Moody, textured shadows","Midnight mocha in premium ceramic cup",Medium
+menu-03,Menu,Espresso Signatures,square,1600x1600,"High detail crema close-up","Espresso flight lineup with tasting cards",High
+story-01,Our Story,Origin,landscape,2200x1300,"Documentary artisan process shot","Barista grinding beans for manual brew",High
+story-02,Our Story,Craft,landscape,2200x1300,"Hands-in-frame craft detail","Steaming milk with precise texture control",High
+experience-01,Experience,Ambience,landscape,2400x1400,"Luxury interior, depth, soft bokeh","Syl Barista lounge with warm ambient lighting",High
+experience-02,Experience,Lifestyle,portrait,1600x2200,"Natural candid guest moment","Guests sharing specialty drinks at Syl Barista",Medium
+location-01,Locations & Hours,Location card,landscape,2000x1200,"Exterior architectural framing","Syl Barista storefront in evening light",Medium
+contact-01,Contact,Header,landscape,2000x1200,"Minimal branded visual","Coffee tools and beans arranged in premium style",Low

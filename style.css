@@ -1,0 +1,297 @@
+/*
+Theme Name: Syl Barista
+Theme URI: https://example.com/syl-barista
+Author: Syl Dev Team
+Author URI: https://example.com
+Description: Modern luxury animated WordPress theme for Syl Barista coffee shop.
+Version: 1.0.0
+Text Domain: syl-barista
+*/
+
+:root {
+  --color-bg: #12110f;
+  --color-bg-soft: #1d1a16;
+  --color-surface: #27221c;
+  --color-text: #f4efe6;
+  --color-text-muted: #c4b7a3;
+  --color-accent: #c69c6d;
+  --color-accent-strong: #e3b47e;
+  --container: min(1120px, 92vw);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html:focus-within { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 20%, #1f1b16 0%, var(--color-bg) 58%);
+  color: var(--color-text);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  background: var(--color-accent);
+  color: #120f0b;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  z-index: 200;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(18, 17, 15, 0.86);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(198, 156, 109, 0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+  gap: 1rem;
+}
+
+.logo {
+  text-decoration: none;
+  line-height: 1;
+  display: inline-flex;
+  flex-direction: column;
+  letter-spacing: 0.08em;
+}
+
+.logo-top { font-size: 0.88rem; color: var(--color-text-muted); }
+.logo-bottom { font-size: 1.3rem; font-family: "Playfair Display", serif; }
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+}
+
+.menu-list a:hover,
+.menu-list .current-menu-item a { color: var(--color-text); }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 3px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(140deg, var(--color-accent), #b88652);
+  color: #120f0b;
+  padding: 0.78rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: transform 240ms ease, box-shadow 240ms ease, background 240ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(198, 156, 109, 0.28);
+  background: linear-gradient(140deg, var(--color-accent-strong), var(--color-accent));
+}
+
+.btn-small { padding: 0.6rem 1rem; font-size: 0.9rem; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(198, 156, 109, 0.5);
+  color: var(--color-text);
+}
+
+.hero,
+.section { padding: clamp(4.5rem, 8vw, 7rem) 0; }
+
+.hero-grid,
+.split {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.eyebrow {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.1;
+  margin: 0 0 0.7rem;
+}
+
+h1 { font-size: clamp(2.5rem, 7vw, 4.8rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+h3 { font-size: 1.4rem; }
+
+.hero-copy { max-width: 54ch; color: var(--color-text-muted); }
+
+.hero-card,
+.card,
+.map-frame,
+.syl-form {
+  background: linear-gradient(180deg, rgba(39, 34, 28, 0.9), rgba(32, 28, 23, 0.85));
+  border: 1px solid rgba(198, 156, 109, 0.22);
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+}
+
+.hero-card ul { margin: 1rem 0 0; padding-left: 1.2rem; color: var(--color-text-muted); }
+
+.hero-actions { display: flex; gap: 0.9rem; margin-top: 1.3rem; flex-wrap: wrap; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.card span {
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-top: 0.6rem;
+  display: inline-block;
+}
+
+.section-soft { background: rgba(29, 26, 22, 0.55); }
+
+.story-points p {
+  margin: 0 0 0.8rem;
+  border-left: 2px solid var(--color-accent);
+  padding-left: 0.8rem;
+}
+
+blockquote.card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+blockquote.card cite { color: var(--color-text-muted); font-style: normal; }
+
+.quick-links {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quick-links a { color: var(--color-accent); text-decoration: none; }
+
+.syl-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.syl-form label { display: grid; gap: 0.35rem; color: var(--color-text-muted); }
+
+.syl-form input,
+.syl-form textarea {
+  width: 100%;
+  border: 1px solid rgba(198, 156, 109, 0.25);
+  background: #161410;
+  color: var(--color-text);
+  border-radius: 0.8rem;
+  padding: 0.7rem 0.85rem;
+}
+
+.syl-form button { justify-self: start; }
+.form-success { color: #95d39e; }
+.form-error { color: #ef8989; }
+
+.site-footer {
+  border-top: 1px solid rgba(198, 156, 109, 0.2);
+  background: rgba(18, 17, 15, 0.95);
+  padding: 3rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.footer-grid h2,
+.footer-grid h3 { margin-bottom: 0.4rem; }
+
+.footer-grid p,
+.footer-grid a { color: var(--color-text-muted); text-decoration: none; }
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 680ms ease, transform 680ms ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .primary-nav { display: none; }
+  .hero-grid,
+  .split,
+  .cards,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}
